@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "../style/style.css"
 
 export default function NavBar(){
