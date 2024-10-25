@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import NavBar from "./component/Navbar";
+import Header from "./component/Header";
+import Session from "./component/Session";
+import Footer from "./component/Footer";
+// import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,10 +29,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta charSet="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link href="https://fonts.googleapis.com/css2?family=Hebo:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <NavBar/>
+        <br/>
+        <Header/>
+        <Session/>
         {children}
+        <Footer/>
+
       </body>
     </html>
   );
